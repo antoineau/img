@@ -12,3 +12,4 @@ We use Semantic versioning 2.0.0.[^1].
 feature/cats
 ------------
 - Adding options to allow the creation of an image from a sample
+- Updating image quality to 100
