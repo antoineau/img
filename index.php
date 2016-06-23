@@ -148,7 +148,7 @@ function createImg($height, $width, $bgColor = '000000', $textColor = 'FFFFFF', 
     $finalY = 10;
 
     //Merging the two images
-    imagecopymerge($final, $source, $finalX, $finalY, 0, 0, $sourceWitdh, $sourceHeight, 60);
+    imagecopymerge($final, $source, $finalX, $finalY, 0, 0, $sourceWitdh, $sourceHeight, 100);
 
     //Display the result
     $display($final, 'data/' . $category .'-'. $width . '-' . $height . '-' . $bgColor . '-' . $textColor . $ext);
