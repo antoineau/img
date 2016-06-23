@@ -1,5 +1,10 @@
 RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-s
-RewriteRule ^data/([0-9]{1,4})-([0-9]{1,4})\.png$ /index.php?height=$1&width=$2 [L]
-RewriteRule ^data/([0-9]{1,4})-([0-9]{1,4})-([0-9a-zA-Z]{6})\.png$ /index.php?height=$1&width=$2&color=$3 [L]
-RewriteRule ^data/([0-9]{1,4})-([0-9]{1,4})-([0-9a-zA-Z]{6})-([0-9a-zA-Z]{6})\.png$ /index.php?height=$1&width=$2&color=$3&txtcolor=$4 [L]
+
+RewriteRule ^data/([0-9]{1,4})-([0-9]{1,4})\.(gif|jpeg|jpg|png)$ /index.php?width=$1&height=$2 [L]
+RewriteRule ^data/([0-9]{1,4})-([0-9]{1,4})-([0-9a-zA-Z]{6})\.(gif|jpeg|jpg|png)$ /index.php?width=$1&height=$2&color=$3 [L]
+RewriteRule ^data/([0-9]{1,4})-([0-9]{1,4})-([0-9a-zA-Z]{6})-([0-9a-zA-Z]{6})\.(gif|jpeg|jpg|png)$ /index.php?width=$1&height=$2&color=$3&textcolor=$4 [L]
+
+RewriteRule ^data/([a-z]+)-([0-9]{1,4})-([0-9]{1,4})\.(gif|jpeg|jpg|png)$ /index.php?category=$1&width=$2&height=$3 [L]
+RewriteRule ^data/([a-z]+)-([0-9]{1,4})-([0-9]{1,4})-([0-9a-zA-Z]{6})\.(gif|jpeg|jpg|png)$ /index.php?category=$1&width=$2&height=$3&color=$4 [L]
+RewriteRule ^data/([a-z]+)-([0-9]{1,4})-([0-9]{1,4})-([0-9a-zA-Z]{6})-([0-9a-zA-Z]{6})\.(gif|jpeg|jpg|png)$ /index.php?category=$1&width=$2&height=$3&color=$4&textcolor=$5 [L]
