@@ -1,6 +1,25 @@
 <?php
+/**
+ * User: Antoine AU
+ * Date: 23/06/2016
+ */
+
+/**
+ * @todo
+ * - add tests to detect the format of the img to display to prevent hazardous sized image
+ * 2 solutions :
+ * 1°/
+ *  -> First, detect the wanted format (landscape / portrait)
+ *  -> Then, look a the picked image from the gallery and detect if it matches the wanted format
+ *      -> If not, pick another image
+ *      -> The picked image matches, resize the image
+ * 2°/
+ *  -> When images are added into the gallery, add a prefix "landscape" or "portrait" to the name of the file
+ *  -> One the directory has been read, pick an image which matches the prefix
+ */
 
 if (isset($_GET)) {
+
     $category   = null;
     if (isset($_GET['category'])) {
         $category = filter_var($_GET['category'], FILTER_SANITIZE_STRING);
