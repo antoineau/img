@@ -24,9 +24,9 @@ Pour enrichir les samples :
 Description
 -----------
  
- http://img.recette.octaveoctave.com/data/cat-200-100-000000-ffffff.png
+ http://<IP>/data/cat-200-100-000000-ffffff.png
  
- - http://img.recette.octaveoctave.com/ : racine du site
+ - http://<IP>/ : racine du site
  - data/ : folder d'appel
  - cat : OPTION FACULTATIVE : catégorie de l'image, fait référence au sous dossier se trouvant dans le dossier samples/
  - 200 : largeur de l'image
